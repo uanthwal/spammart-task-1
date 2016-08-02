@@ -1,0 +1,36 @@
+<html>
+<head>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script language="javascript" type="text/javascript">
+   
+		navigator.geolocation.getCurrentPosition(function(position) {
+		var pLat = position.coords.latitude;
+		var pLong = position.coords.longitude;
+		console.log(pLat);
+		console.log(pLong);
+		document.getElementById("map").innerHtml = pLat + " - " + pLong;
+		});
+		//window.onload = InitializeMap;
+
+</script>
+</head>
+<body>
+<h2>Gecoding Demo JavaScript: </h2>
+		
+<table>
+<tr>
+<td>
+    <input id="addressinput" type="text" style="width: 447px" />   
+</td>
+<td>
+    <input id="Button1" type="button" value="Find" onclick="return Button1_onclick()" /></td>
+</tr>
+<tr>
+<td colspan ="2">
+<div id ="map" style="height: 253px" >
+</div>
+</td>
+</tr>
+</table>
+</body>
+</html>
