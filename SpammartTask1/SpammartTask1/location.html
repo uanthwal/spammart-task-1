@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Geolocation Task</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <link href="location.css" rel="stylesheet" />
+</head>
+<body>
+    <p id="current-location-text"> Your current location</p>
+    <div id="map"></div>
+    <div class="loading">Loading....</div>
+    <div class="content">
+        <p id="weather-info-text"> Weather information</p>
+        Name: <span id="current-name"></span>
+        <p></p>
+        Coordinates:
+        <ul>
+            <li>Latitude: <span id="current-lat"></span></li>
+            <li>
+                Longitude: <span id="current-lng"></span>
+            </li>
+        </ul>
+
+        Weather Information:
+
+        <p> Wind:</p>
+        <ul>
+            <li>
+                Speed: <span id="current-speed"></span>
+            </li>
+            <li>
+                Degree: <span id="current-degree"></span>
+            </li>
+        </ul>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="getLocationAndMap.js"></script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1aTLsXbIAaJMR9V-vP1suob1SokyQzfE&callback=initMap">
+    </script>
+</body>
+</html>
